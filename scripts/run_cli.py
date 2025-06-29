@@ -4,6 +4,7 @@ from pathlib import Path
 import json
 import argparse, sys
 
+
 def main() -> None:
     p = argparse.ArgumentParser(description="Summarize a document (txt/pdf)")
     p.add_argument("--file", required=True, help="Path to file OR '-' for stdin")
@@ -18,8 +19,11 @@ def main() -> None:
     else:
         src = Path(args.file)
 
-    out = summarize(src, backend=args.backend, model=args.model, temperature=args.temperature)
+    out = summarize(
+        src, backend=args.backend, model=args.model, temperature=args.temperature
+    )
     json.dump(out, sys.stdout, indent=2, ensure_ascii=False)
+
 
 if __name__ == "__main__":
     main()

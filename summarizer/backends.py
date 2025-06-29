@@ -16,8 +16,11 @@ import os
 from typing import List, Dict, Literal, TypedDict
 
 from openai import OpenAI
-
+from logging import getLogger
 # --------------------------- type helpers ---------------------------
+
+
+logger = getLogger(__name__)
 
 
 class Message(TypedDict):
@@ -77,6 +80,8 @@ def choose_backend(
     model: str | None = None,
 ) -> BaseBackend:
     """Return an instantiated backend based on the `--backend` CLI flag."""
+    print(f"Using backend: {engine!r} (model={model!r})")  # noqa: T201
+    logger.info(f"Using backend: {engine!r} (model={model!r})")
     if engine == "gpt4o":
         return GPT4oBackend()
     if engine == "llama":
