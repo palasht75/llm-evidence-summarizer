@@ -3,7 +3,7 @@ from summarizer.pipeline import summarize
 
 st.title("Explainable LLM Summarizer")
 up_file = st.file_uploader("Upload PDF or TXT")
-engine   = st.selectbox("Backend", ["gpt4o", "llama"])
+engine = st.selectbox("Backend", ["gpt4o", "llama"])
 
 if up_file and st.button("Summarize"):
     out = summarize(up_file, backend=engine)
@@ -15,4 +15,4 @@ if up_file and st.button("Summarize"):
         st.markdown(f"**• {bullet['bullet']}**")
         ids = bullet["evidence_ids"]
         for i in ids:
-            st.markdown(f"> {i}. {txt.splitlines()[i-1]}")
+            st.markdown(f"> {i}. {txt.splitlines()[i - 1]}")
