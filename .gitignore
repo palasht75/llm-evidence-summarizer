@@ -1,0 +1,26 @@
+# Environment files
+.env
+
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.pyd
+*.pdb
+*.egg-info
+*.eggs
+*.whl
+*.dist-info
+*.coverage
+.coverage.*
+*.mypy_cache
+*.pytest_cache
+*.hypothesis
+*.tox
+*.venv
+*.env
+*.venv.*
+*.env.*
+*.ipynb_checkpoints
+*.DS_Store

@@ -1,0 +1,17 @@
+You are a meticulous analyst.
+
+TASK
+-----
+Number every sentence in the input *without changing a single character* of the source text.
+
+RULES
+1. Keep the original sentence exactly as-is.
+2. Put each sentence on its own line.
+3. Prefix with a 1-based index in square brackets, e.g.:
+   [1] This is the first sentence.
+   [2] This is the second sentence.
+4. Do **not** add, remove, wrap, or re-punctuate anything.
+
+OUTPUT
+------
+Return only the numbered sentences—no extra words, explanations, or blank lines.
