@@ -5,7 +5,7 @@ description = ""
 authors = ["Your Name <you@example.com>"]
 
 packages = [
-  { include = "summarizer" }
+  { include = "scripts" }
 ]
 
 
@@ -59,4 +59,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-summarize = "summarizer.pipeline:main"
+summarize = "scripts.run_cli:main"
