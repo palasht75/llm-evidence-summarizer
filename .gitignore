@@ -1,26 +1,41 @@
 # Environment files
 .env
+*.env
+*.env.*
+*.venv
+*.venv.*
+.venv
 
-__pycache__
+# Python bytecode and cache
+__pycache__/
 *.pyc
 *.pyo
 *.pyd
 *.pkl
-*.pyd
 *.pdb
-*.egg-info
-*.eggs
+
+# Python packaging
+*.egg-info/
+*.eggs/
 *.whl
-*.dist-info
+*.dist-info/
+
+# Coverage and testing
 *.coverage
 .coverage.*
-*.mypy_cache
-*.pytest_cache
-*.hypothesis
-*.tox
-*.venv
-*.env
-*.venv.*
-*.env.*
-*.ipynb_checkpoints
+.mypy_cache/
+.pytest_cache/
+.hypothesis/
+.tox/
+
+# Jupyter Notebook
+*.ipynb_checkpoints/
+
+# OS files
 *.DS_Store
+
+# Archives
+*.tar.gz
+*.zip
+.tar.gz
+.zip
