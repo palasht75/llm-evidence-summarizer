@@ -61,7 +61,6 @@ poetry run summarize --backend gpt4o --file path/to/document.txt
 # Summarize with Llama 3.2 (local via Ollama)
 # Ensure Ollama is running:
 ollama pull llama3.2
-ollama run llama3.2 &
 poetry run summarize --backend llama --file path/to/document.txt
 ```
 
@@ -107,16 +106,6 @@ poetry run streamlit run app.py
 3. **Summarization & Citation**: The `abstract.txt` prompt produces up to 8 bullet points, appending `| id1,id2` after each.
 4. **Parsing**: A simple regex converts the LLM’s bullet list into a JSON array of `{ bullet, evidence_ids }`.
 5. **Backend Switch**: Both GPT-4o-mini and Ollama Llama are driven via the same OpenAI-compatible client—only the `base_url` and `model` parameters differ.
-
----
-
-## 🌟 Roadmap
-
-- **v1.0**: Add EN↔FR translation layer, improve chunking and caching, include performance dashboard.
-- **v1.1**: Support DOCX ingestion, audio transcript summaries, configurable bullet count.
-- **v2.0**: Deploy a hosted web UI (e.g., Hugging Face Space), plugin architecture for domain-specific prompts.
-
----
 
 ## 🤝 Contributing
 
