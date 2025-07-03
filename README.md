@@ -138,6 +138,9 @@ poetry run streamlit run demo_app.py
 ## 🏗️ Scalable Architecture
 Below is an AWS‑based deployment sketch showing how the pipeline could run at scale:
 
+
+![Alt text](./system_architecture.svg)
+
 <img src="./system_architecture.svg" alt="Screenshot" width="600"/>
 
 ### How Each AWS Component Fits In
