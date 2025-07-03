@@ -125,23 +125,11 @@ poetry run streamlit run demo_app.py
 4. **Parsing**: A simple regex converts the LLM’s bullet list into a JSON array of `{ bullet, evidence_ids }`.
 5. **Backend Switch**: Both GPT-4o-mini and Ollama Llama are driven via the same OpenAI-compatible client—only the `base_url` and `model` parameters differ.
 
----
-
-## 🌟 Roadmap
-
-- **v1.0**: Add EN↔FR translation layer, improve chunking and caching, include performance dashboard.
-- **v1.1**: Support DOCX ingestion, audio transcript summaries, configurable bullet count.
-- **v2.0**: Deploy a hosted web UI (e.g., Hugging Face Space), plugin architecture for domain-specific prompts.
-
----
-
 ## 🏗️ Scalable Architecture
 Below is an AWS‑based deployment sketch showing how the pipeline could run at scale:
 
+![AWS](./system_architecture.svg)
 
-![Alt text](./system_architecture.svg)
-
-<img src="./system_architecture.svg" alt="Screenshot" width="600"/>
 
 ### How Each AWS Component Fits In
 
